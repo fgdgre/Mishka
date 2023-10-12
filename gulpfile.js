@@ -76,7 +76,7 @@ exports.build = series(
   cleanBuild,
   copy,
   optimizeImages,
-  parallel(styles, html, scripts)
+  parallel(styles, html)
 );
 
 exports.default = series(
