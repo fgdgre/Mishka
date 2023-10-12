@@ -1,0 +1,169 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 45px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header button"
+      "paragraph paragraph"
+      "userName buttonSwich"
+      "userImail buttonSwich";
+    background-image: url("/img/review-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    max-width: 1250px;
+    margin: 0 auto;
+    background-image: url("/img/review-desktop.jpg");
+    background-repeat: no-repeat;
+    min-height: 460px;
+    padding-left: 150px;
+  }
+}
+
+.reviews__header {
+  margin: 0;
+  grid-area: header;
+}
+
+@media (min-width: 768px) {
+  .reviews__header {
+    margin: 0;
+    padding-top: 83px;
+  }
+}
+
+@media (min-width: 768px) {
+  .reviews__header {
+    margin: 0;
+    padding-top: 83px;
+  }
+}
+
+.reviews__button {
+  order: 3;
+  text-transform: uppercase;
+  padding: 16px 65px;
+  background-color: #ffffff;
+  width: 260px;
+}
+
+@media (min-width: 768px) {
+  .reviews__button {
+    order: 0;
+    grid-area: button;
+    width: 170px;
+    padding: 14px 26px;
+    justify-self: right;
+    height: fit-content;
+    align-self: center;
+  }
+}
+
+.reviews__paragraph {
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+@media (min-width: 768px) {
+  .reviews__paragraph {
+    font-size: 17px;
+    line-height: 30px; /* 176.471% */
+    padding-top: 40px;
+    padding-bottom: 60px;
+    grid-area: paragraph;
+  }
+}
+
+.reviews__user__name {
+  line-height: 24px;
+  font-size: 17px;
+  grid-area: userName;
+}
+
+.reviews__user__email {
+  line-height: 30px;
+  font-size: 17px;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .reviews__user__email {
+    margin: 0;
+    grid-area: userImail;
+  }
+}
+
+.reviews__user__button-swiching__wrap {
+  display: flex;
+  padding-bottom: 40px;
+  grid-area: buttonSwich;
+}
+
+@media (min-width: 768px) {
+  .reviews__user__button-swiching__wrap {
+    justify-self: right;
+    padding-bottom: 0;
+    align-self: center;
+  }
+}
+
+.reviews__user__button-swiching {
+  background-color: #ffffff;
+  border: solid 1px;
+  border-color: rgb(159 159 159 / 26%);
+  margin: 0;
+  padding: 13px 19px;
+}
+
+@media (min-width: 768px) {
+  .reviews__user__button-swiching {
+    border: none;
+  }
+
+  .reviews__user__button-swiching_border-right-size {
+    border: none;
+  }
+
+  .reviews__user__button-swiching_border-left-size {
+    border: none;
+  }
+}
+
+.reviews__user__button-swiching__image_reversed {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .reviews__wave-tablet {
+    display: block;
+    position: relative;
+    padding-top: 70px;
+    background-position: bottom;
+  }
+}
+// .reviews__user__button-swiching_border-right-size {
+//   border-right: solid 0.5px;
+//   border-color: rgb(159 159 159 / 26%);
+// }
+
+// .reviews__user__button-swiching_border-left-size {
+//   border-left: solid 0.5px;
+//   border-color: rgb(159 159 159 / 26%);
+// }

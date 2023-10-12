@@ -1,0 +1,132 @@
+.info {
+  display: grid;
+  background-image: url("/img/toy-home.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  min-height: 250px;
+  background-color: #8080800d;
+}
+
+@media (min-width: 768px) {
+  .info {
+    background-image: url("/img/toy-home-tablet.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: #8080800d;
+    min-height: 745px;
+  }
+}
+
+.info__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-top: 75px;
+  line-height: 30px;
+  font-size: 27px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .info__header {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+    padding-bottom: 370px;
+    font-size: 43px;
+    line-height: 50px;
+    width: 670px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .info__header {
+    padding-top: 70px;
+  }
+}
+
+.info__button {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 40px;
+  border: none;
+  color: #ffffff;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  line-height: 24px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .info__button {
+    width: calc(50% - 50px);
+    max-width: 525px;
+    min-height: 120px;
+    align-items: baseline;
+  }
+}
+
+.button_color_dark-green {
+  background-color: hsl(171, 48%, 55%);
+}
+
+.button_color_green {
+  background-color: hsl(168, 54%, 60%);
+}
+
+.info__button__paragraph {
+  max-width: 130px;
+  margin-right: auto;
+}
+
+.info__button__icon {
+  position: absolute;
+  right: 30px;
+}
+
+.info__button__icon_position-center {
+  transform: translate(-25%);
+}
+
+.info__button__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding-top: 170px;
+}
+
+@media (min-width: 768px) {
+  .info__button__wrapper {
+    padding-top: 0;
+  }
+}
+
+.decirative-wave {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url("/img/zigzag-fill-tablet.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 25px;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .decirative-wave {
+    display: block;
+  }
+}
+
+.info__head-desktop {
+  display: none;
+}

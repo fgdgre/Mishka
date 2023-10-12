@@ -1,0 +1,117 @@
+.developing-process {
+  border: solid 1px;
+  border-color: rgb(159 159 159 / 26%);
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  justify-self: center;
+}
+
+@media (min-width: 768px) {
+  .developing-process {
+    width: calc(100% - 100px);
+    justify-self: center;
+    max-width: 730px;
+  }
+}
+
+.developing-proces__wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  display: grid;
+}
+
+.developing-process__paragraph {
+  line-height: 24px;
+  font-size: 13px;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .developing-proces__wrapper {
+    padding-top: 25px;
+    order: 3;
+  }
+
+  .developing-process__paragraph {
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+
+.developing-process__button {
+  background-color: #ffffff;
+  border: solid 2px;
+  line-height: 16px;
+  font-size: 18px;
+  padding: 11px 18px;
+  word-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .developing-process__button {
+    padding: 18px 22px;
+  }
+}
+
+.developing-process__video__wrapper {
+  position: relative;
+}
+
+.developing-process__video__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  width: 100px;
+  height: 75px;
+  border-radius: 25px;
+  border: solid 5px;
+  border-color: #ffffff;
+  background-color: hsl(168, 54%, 60%);
+}
+
+.developing-process__video-tablet {
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .developing-process__video-tablet {
+    display: flex;
+  }
+
+  .developing-process__video-mobail {
+    display: none;
+  }
+}
+
+.developing-process__heaeder__wrapper {
+  display: flex;
+  padding-left: 35px;
+  padding-right: 35px;
+  align-items: center;
+  gap: 25px;
+}
+
+.developing-process__heaeder {
+  line-height: 24px;
+  font-size: 17px;
+}
+
+@media (min-width: 768px) {
+  .developing-process__heaeder__wrapper {
+    order: 2;
+    padding-top: 40px;
+  }
+
+  .developing-process__heaeder {
+    line-height: 24px;
+    font-size: 20px;
+  }
+}

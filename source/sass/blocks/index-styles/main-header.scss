@@ -1,0 +1,23 @@
+.main-header {
+  line-height: 30px;
+  font-size: 27px;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    line-height: 50px;
+    font-size: 43px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-header {
+    line-height: 57px;
+    font-size: 53px;
+  }
+}
+
+.main__paragraph {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
