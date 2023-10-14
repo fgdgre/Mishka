@@ -9,12 +9,17 @@
 
 .main__head {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 75px;
   padding-bottom: 75px;
   background-color: #f1f1f1;
   position: relative;
+}
+
+.catalog__head__header {
+  margin-top: 75px;
+  margin-bottom: 0;
 }
 
 .main-head__wrapper {
@@ -22,7 +27,7 @@
 }
 
 @media (min-width: 768px) {
-  .main__head {
-    padding-top: 60px;
+  .catalog__head__header {
+    margin-top: 145px;
   }
 }

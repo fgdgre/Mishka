@@ -115,3 +115,20 @@
     align-self: end;
   }
 }
+
+@media (min-width: 1150px) {
+  .catalog-offers {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .catalog-offer__cards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalog-offer__cards-item {
+    display: flex;
+    flex-direction: column;
+  }
+}

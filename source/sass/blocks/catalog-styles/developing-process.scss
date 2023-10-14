@@ -115,3 +115,24 @@
     font-size: 20px;
   }
 }
+
+@media (min-width: 1150px) {
+  .developing-process {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    margin-bottom: 100px;
+    gap: 80px;
+  }
+
+  .developing-process__video__wrapper {
+    grid-row: 1 / 3;
+  }
+
+  .developing-process__heaeder__wrapper {
+    display: block;
+    max-width: 180px;
+    gap: 25px;
+  }
+}
