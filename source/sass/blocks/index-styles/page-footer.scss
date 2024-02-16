@@ -4,7 +4,8 @@
 
 @media (min-width: 768px) {
   .page-footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     padding: 20px 50px;
   }
@@ -29,6 +30,7 @@
 @media (min-width: 768px) {
   .page-footer__developed-by-htmlAcademy {
     padding-bottom: 0;
+    margin-left: auto;
   }
 
   .page-footer__social-media__list {

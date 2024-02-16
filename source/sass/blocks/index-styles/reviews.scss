@@ -61,6 +61,7 @@
   padding: 16px 65px;
   background-color: #ffffff;
   width: 260px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -72,6 +73,7 @@
     justify-self: right;
     height: fit-content;
     align-self: center;
+    margin: 0;
   }
 }
 

@@ -360,6 +360,7 @@
 
       <section class="offer">
         <div class="offer__wrapper">
+          <!-- <div class="offer__text-wrapper"> -->
           <h1 class="main-header offer__header main-paradraph_bold">
             Вязаные корзинки
           </h1>
@@ -400,24 +401,31 @@
               </tr>
             </tbody>
           </table>
-          <picture class="offer__picture">
-            <source
-              class="offer__image"
-              media="(min-width: 1150px)"
-              srcset="img/triple-set-desktop.jpg"
-            />
-            <source
-              class="offer__image"
-              media="(min-width: 768px)"
-              srcset="img/triple-set-tablet.jpg"
-            />
-            <source
-              class="offer__image"
-              media="(min-width: 320px)"
-              srcset="img/triple-set.jpg"
-            />
-            <img class="offer__image" src="img/triple-set-tablet.jpg" alt="#" />
-          </picture>
+          <!-- </div> -->
+          <div class="offer__picture__wrapper">
+            <picture class="offer__picture">
+              <source
+                class="offer__image"
+                media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop.jpg"
+              />
+              <source
+                class="offer__image"
+                media="(min-width: 768px)"
+                srcset="img/triple-set-tablet.jpg"
+              />
+              <source
+                class="offer__image"
+                media="(min-width: 320px)"
+                srcset="img/triple-set.jpg"
+              />
+              <img
+                class="offer__image"
+                src="img/triple-set-tablet.jpg"
+                alt="#"
+              />
+            </picture>
+          </div>
           <div class="offer__price__wrapper">
             <h2 class="offer__price">Цена: 990 грн.</h2>
             <button class="button offer__button-order" type="button">
