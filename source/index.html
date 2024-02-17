@@ -53,20 +53,22 @@
               />
             </svg>
           </a>
-          <svg
-            class="page-nav__menu-image"
-            width="20"
-            height="14"
-            viewBox="0 0 20 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M20 0H0V2H20V0Z" fill="#231F20" />
-            <path d="M20 6H0V8H20V6Z" fill="#231F20" />
-            <path d="M20 12H0V14H20V12Z" fill="#231F20" />
-          </svg>
+          <button class="page-nav__menu-button" onclick="toggleMenu()">
+            <svg
+              class="page-nav__menu-image"
+              width="20"
+              height="14"
+              viewBox="0 0 20 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20 0H0V2H20V0Z" fill="#231F20" />
+              <path d="M20 6H0V8H20V6Z" fill="#231F20" />
+              <path d="M20 12H0V14H20V12Z" fill="#231F20" />
+            </svg>
+          </button>
         </div>
-        <ul class="page-nav__list list-style__none">
+        <ul class="page-nav__list list-style__none hidden">
           <li class="page-nav__list_item page-nav__logo-tablet_wrapper">
             <a href="#">
               <svg
@@ -655,6 +657,7 @@
         <div class="decorative-wave-mobail wave-mobail reviews__wave"></div>
       </section>
       <div class="reviews__wave-tablet wave-tablet"></div>
+
       <section class="contacts">
         <div class="contacts__header-wrapper">
           <h1 class="main-header contacts__header">Контакты</h1>
@@ -676,6 +679,23 @@
             />
           </svg>
         </div>
+        <svg
+          class="contacts__image-desktop"
+          width="47"
+          height="81"
+          viewBox="0 0 47 81"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.76611 3.86183V42.3812L47 23.072L7.76611 3.86183ZM0 80.9005V0H3.83261V80.9005H0Z"
+            fill="#63D1BB"
+          />
+          <path
+            d="M3.83262 0.0996094H0V81.0001H3.83262V0.0996094Z"
+            fill="#231F20"
+          />
+        </svg>
         <table class="main-table contacts__table main__paragraph">
           <tbody class="contacts__table__body">
             <tr class="contacts__table__row">
@@ -837,5 +857,6 @@
         </a>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

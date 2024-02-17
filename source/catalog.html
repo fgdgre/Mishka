@@ -10,7 +10,7 @@
     <header class="page-header">
       <nav class="page-nav">
         <div class="page-nav__images-wrapper">
-          <a class="logo-link" href="#">
+          <a class="logo-link" href="index.html">
             <svg
               class="page-nav__logo-mobail"
               width="86"
@@ -53,18 +53,20 @@
               />
             </svg>
           </a>
-          <svg
-            class="page-nav__menu-image"
-            width="20"
-            height="14"
-            viewBox="0 0 20 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M20 0H0V2H20V0Z" fill="#231F20" />
-            <path d="M20 6H0V8H20V6Z" fill="#231F20" />
-            <path d="M20 12H0V14H20V12Z" fill="#231F20" />
-          </svg>
+          <button class="page-nav__menu-button" onclick="toggleMenu()">
+            <svg
+              class="page-nav__menu-image"
+              width="20"
+              height="14"
+              viewBox="0 0 20 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20 0H0V2H20V0Z" fill="#231F20" />
+              <path d="M20 6H0V8H20V6Z" fill="#231F20" />
+              <path d="M20 12H0V14H20V12Z" fill="#231F20" />
+            </svg>
+          </button>
         </div>
         <ul class="page-nav__list list-style__none">
           <li class="page-nav__list_item page-nav__logo-tablet_wrapper">
@@ -602,5 +604,6 @@
         </a>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
