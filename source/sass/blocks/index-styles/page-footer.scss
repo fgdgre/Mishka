@@ -11,6 +11,15 @@
   }
 }
 
+@media (min-width: 1150px) {
+  .page-footer {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
 .page-footer__social-media__list {
   display: flex;
   width: 145px;

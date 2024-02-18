@@ -27,12 +27,13 @@
 
 @media (min-width: 1150px) {
   .reviews {
-    max-width: 1050px;
+    max-width: 1150px;
     margin: 0 auto;
     background-image: url("/img/review-desktop.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 150px;
+    box-sizing: border-box;
   }
 }
 
@@ -160,6 +161,21 @@
     position: relative;
     padding-top: 70px;
     background-position: bottom;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews__wave-tablet {
+    display: none;
+  }
+  .reviews__wave-desktop {
+    display: block;
+    position: relative;
+    padding-top: 70px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 }
 // .reviews__user__button-swiching_border-right-size {
