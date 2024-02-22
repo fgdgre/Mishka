@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="fonts/OpenSans-VariableFont_wdth.css" />
+    <link rel="stylesheet" href="PTSans-Bold.css" />
+    <link rel="stylesheet" href="fonts/PTSans-Regular.css" />
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -54,7 +57,12 @@
             </svg>
           </a>
           <button class="page-nav__menu-button" onclick="toggleMenu()">
-            <svg
+            <div class="page-nav__menu-image">
+              <div class="svg-stik svg-stik-1"></div>
+              <div class="svg-stik svg-stik-2"></div>
+              <div class="svg-stik svg-stik-3"></div>
+            </div>
+            <!-- <svg
               class="page-nav__menu-image"
               width="20"
               height="14"
@@ -65,12 +73,12 @@
               <path d="M20 0H0V2H20V0Z" fill="#231F20" />
               <path d="M20 6H0V8H20V6Z" fill="#231F20" />
               <path d="M20 12H0V14H20V12Z" fill="#231F20" />
-            </svg>
+            </svg> -->
           </button>
         </div>
         <ul class="page-nav__list list-style__none hidden">
           <li class="page-nav__list_item page-nav__logo-tablet_wrapper">
-            <a href="index.html">
+            <a class="logo-link-tablet" href="index.html">
               <svg
                 class="page-nav__logo-tablet"
                 width="114"
@@ -114,7 +122,7 @@
             </a>
           </li>
           <li class="page-nav__list_item page-nav__logo-desktop_wrapper">
-            <a href="index.html">
+            <a class="logo-link-desktop" href="index.html">
               <svg
                 class="page-nav__logo-desktop"
                 xmlns="http://www.w3.org/2000/svg"

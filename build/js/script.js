@@ -1,9 +1,3 @@
-"use strict";
 
-function toggleMenu() {
-  if (document.querySelector(".page-nav__list").classList.contains("hidden")) {
-    document.querySelector(".page-nav__list").classList.remove("hidden");
-  } else {
-    document.querySelector(".page-nav__list").classList.add("hidden");
-  }
-}
+"use strict";let comments=[{userImail:"@misssssiskras2",userName:"Анастасия Красильникова",comment:"Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!",},];function toggleMenu(){document.querySelector(".page-nav__list").classList.toggle("hidden");document.querySelector(".page-nav__menu-image").classList.toggle("page-nav__menu-image-active");}
+let swiper=new swiper(".mySwiper",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev",},});

@@ -267,6 +267,16 @@
   padding: 16px 70px;
   width: 260px;
   margin: 0 auto;
+  border: solid 2px #444;
+}
+
+.offer__button-order:hover {
+  background: #444;
+  color: #ffffff;
+}
+
+.offer__button-order:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 768px) {

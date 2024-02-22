@@ -1,36 +1,73 @@
-const { series, src, dest, watch, parallel } = require("gulp");
-const browser = require("browser-sync");
-const clean = require("gulp-clean");
-const htmlmin = require("gulp-htmlmin");
-const plumber = require("gulp-plumber");
-const sass = require("gulp-dart-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const rename = require("gulp-rename");
-const cleanCSS = require("gulp-clean-css");
+// const { series, src, watch, dest, parallel } = require("gulp");
+import gulp from "gulp";
+import pkg from "gulp";
+const { series, parallel, src, watch, dest } = pkg;
+import scss from "gulp-dart-scss";
+import htmlmin from "gulp-htmlmin";
+import cleanCSS from "gulp-clean-css";
+import minifyjs from "gulp-jsmin";
+import clean from "gulp-clean";
+import autoPrefixer from "autoprefixer";
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from "gulp-imagemin";
+import fontmin from "gulp-fontmin";
+import browsersync from "browser-sync";
 
 const html = () => {
   return src("source/*.html")
-    .pipe(
-      htmlmin({
-        collapseWhitespace: true, // удаляем все переносы
-        removeComments: true, // удаляем все комментарии
-      })
-    )
-    .pipe(dest("build"));
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(dest("build/"))
+    .pipe(browsersync.stream());
 };
 
-const cleanBuild = (cb) => {
+const styles = () => {
+  return src("source/sass/style.scss")
+    .pipe(scss([autoPrefixer()]))
+    .pipe(cleanCSS())
+    .pipe(dest("build/css/"))
+    .pipe(browsersync.stream());
+};
+
+const scripts = (cb) => {
+  return src("source/js/*.js")
+    .pipe(minifyjs())
+    .pipe(dest("build/js/"))
+    .pipe(browsersync.stream());
+};
+
+const fonts = () => {
+  return src("source/fonts/*.ttf").pipe(fontmin()).pipe(dest("build/fonts/"));
+};
+
+const cleanUp = () => {
   return src("build", { allowEmpty: true }).pipe(clean());
 };
 
-const optimizeImages = (done) => {
-  return src("source/img/**/*").pipe(dest("build/img"));
-};
-done();
+const img = () =>
+  src("source/img/**/*")
+    .pipe(
+      imagemin([
+        gifsicle({ interlaced: true }),
+        mozjpeg({ quality: 70, progressive: true }),
+        optipng({ optimizationLevel: 1 }),
+        svgo({
+          plugins: [
+            {
+              name: "removeViewBox",
+              active: true,
+            },
+            {
+              name: "cleanupIDs",
+              active: false,
+            },
+          ],
+        }),
+      ])
+    )
+    .pipe(gulp.dest("build/img"))
+    .pipe(browsersync.stream());
 
 const server = (done) => {
-  browser.init({
+  browsersync.init({
     server: {
       baseDir: "build",
     },
@@ -42,46 +79,30 @@ const server = (done) => {
 };
 
 const reload = () => {
-  browser.reload();
-};
-
-const styles = () => {
-  return src("source/sass/style.scss", { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(cleanCSS())
-    .pipe(rename("style.min.css"))
-    .pipe(dest("build/css", { sourcemaps: "." }))
-    .pipe(browser.stream());
-};
-
-const scripts = (cb) => {
-  return src("source/js/script.js")
-    .pipe(dest("build/js"))
-    .pipe(browser.stream());
+  browsersync.reload();
 };
 
 const watcher = () => {
   watch("source/sass/**/*.scss", series(styles));
   watch("source/js/script.js", series(scripts));
-  watch("source/*.html", series(html, reload));
+  watch("source/*.html", series(html));
 };
 
-const copy = (done) => {
-  return src(["source/fonts/*", "source/*.ico"]).pipe(dest("build"));
-};
+// const _default = series(
+//   cleanUp,
+//   parallel(html, styles, scripts)
+//   // series(server, watcher)
+// );
 
-exports.build = series(
-  cleanBuild,
-  copy,
-  optimizeImages,
-  parallel(styles, html, scripts)
+export const build = series(
+  cleanUp,
+  img,
+  parallel(html, styles, scripts, fonts)
 );
 
-exports.default = series(
-  cleanBuild,
-  copy,
-  parallel(styles, html, scripts, optimizeImages),
+export const browser = series(
+  cleanUp,
+  img,
+  parallel(html, styles, scripts, fonts),
   series(server, watcher)
 );

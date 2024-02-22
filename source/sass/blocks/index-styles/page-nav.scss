@@ -2,9 +2,38 @@
   display: flex;
 }
 
+// @media (min-width: 768px) {
+//   .page-header {
+//     max-width: 1150px;
+//     margin: 0 auto;
+//   }
+// }
+
 .page-nav__logo-mobail {
   display: flex;
   margin: 0 auto;
+}
+
+.logo-link:hover .page-nav__logo-mobail {
+  opacity: 0.6;
+}
+.logo-link-tablet:hover .page-nav__logo-tablet {
+  opacity: 0.6;
+}
+.logo-link-desktop:hover .page-nav__logo-desktop {
+  opacity: 0.6;
+}
+
+.logo-link:active .page-nav__logo-mobail {
+  opacity: 0.3;
+}
+
+.logo-link-tablet:active .page-nav__logo-tablet {
+  opacity: 0.3;
+}
+
+.logo-link-desktop:active .page-nav__logo-desktop {
+  opacity: 0.3;
 }
 
 .page-nav__images-wrapper {
@@ -17,9 +46,14 @@
 .page-nav__list {
   position: absolute;
   background-color: #ffffff;
-  z-index: 1;
   width: 100%;
+  z-index: 1;
 }
+
+// .page-nav__list-hidden {
+//   transform: translateY(-350px);
+//   z-index: -1;
+// }
 
 .hidden {
   display: none;
@@ -104,14 +138,25 @@
 }
 
 .page-nav__list_link {
-  padding: 27px 50px;
+  padding: 30px 50px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page-nav__list_link:hover {
+  opacity: 0.6;
+}
+
+.page-nav__list_link:active {
+  opacity: 0.3;
 }
 
 .page-nav__list_link_paragraph {
   display: flex;
-  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
   font-size: 15px;
   line-height: 24px;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -126,9 +171,27 @@
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 27px 50px;
+  padding: 30px 50px;
   justify-content: center;
   align-items: center;
+}
+
+.page-nav__list_link_image {
+  fill: #000;
+  opacity: 0.2;
+}
+
+.page-nav-button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-nav-button:hover .page-nav__list_link_image {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.page-nav-button:active {
+  opacity: 0.3;
 }
 
 @media (min-width: 768px) {
@@ -248,6 +311,7 @@
 
 .logo-link {
   display: contents;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media (min-width: 768px) {
@@ -278,6 +342,32 @@
   position: absolute;
   right: 20px;
   background-color: transparent;
+  cursor: pointer;
   border: none;
   padding: 15px;
+}
+
+.page-nav__menu-button:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.svg-stik {
+  height: 2px;
+  width: 20px;
+  border-radius: 1px;
+  background-color: black;
+  margin-bottom: 4px;
+  transition: all 0.2s;
+}
+
+.page-nav__menu-image-active .svg-stik-1 {
+  transform: rotate(45deg) translateY(4px);
+}
+
+.page-nav__menu-image-active .svg-stik-2 {
+  display: none;
+}
+
+.page-nav__menu-image-active .svg-stik-3 {
+  transform: rotate(-45deg) translateY(-4.5px);
 }

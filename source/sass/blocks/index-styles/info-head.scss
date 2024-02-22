@@ -19,6 +19,19 @@
   font-size: 15px;
 }
 
+.info-head__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.info-head__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.info-head__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .info-head__paragraph_first {
   padding: 27px 50px;
   padding-right: 27px;

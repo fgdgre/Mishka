@@ -12,13 +12,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 75px;
+  min-height: 180px;
   background-color: #f1f1f1;
   position: relative;
 }
 
 .catalog__head__header {
-  margin-top: 75px;
   margin-bottom: 0;
 }
 
@@ -27,7 +26,15 @@
 }
 
 @media (min-width: 768px) {
+  .main__head {
+    min-height: 255px;
+  }
+}
+@media (min-width: 1150px) {
+  .main__head {
+    min-height: auto;
+  }
   .catalog__head__header {
-    margin-top: 145px;
+    padding: 50px 0 75px 0;
   }
 }
