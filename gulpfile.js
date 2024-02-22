@@ -24,9 +24,10 @@ const cleanBuild = (cb) => {
   return src("build", { allowEmpty: true }).pipe(clean());
 };
 
-const optimizeImages = () => {
+const optimizeImages = (done) => {
   return src("source/img/**/*").pipe(dest("build/img"));
 };
+done();
 
 const server = (done) => {
   browser.init({
@@ -40,9 +41,8 @@ const server = (done) => {
   done();
 };
 
-const reload = (done) => {
+const reload = () => {
   browser.reload();
-  done();
 };
 
 const styles = () => {
